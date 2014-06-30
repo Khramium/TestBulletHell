@@ -1,0 +1,25 @@
+﻿Build started 6/27/2014 2:22:44 PM.
+     1>Project "C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\CinderProject.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\include /I..\..\..\..\..\Documents\cinder_0.8.5_vc2012\cinder_0.8.5_vc2012\include /I..\..\..\..\..\Documents\cinder_0.8.5_vc2012\cinder_0.8.5_vc2012\boost /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D NOMINMAX /D _WIN32_WINNT=0x0502 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\CinderProjectApp.cpp
+         CinderProjectApp.cpp
+     1>c:\users\student\desktop\drakem\final project (cinder)\cinderproject\src\cinderprojectapp.cpp(275): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\student\desktop\drakem\final project (cinder)\cinderproject\src\cinderprojectapp.cpp(278): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\Debug\CinderProject.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\..\..\..\..\Documents\cinder_0.8.5_vc2012\cinder_0.8.5_vc2012\lib /LIBPATH:..\..\..\..\..\Documents\cinder_0.8.5_vc2012\cinder_0.8.5_vc2012\lib\msw cinder_d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMT /NODEFAULTLIB:LIBCPMT /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\Debug\CinderProject.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\Debug\CinderProject.lib" /MACHINE:X86 Debug\Resources.res
+         Debug\CinderProjectApp.obj
+     1>cinder_d.lib(zutil.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(zutil.obj)' or at 'C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(trees.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(trees.obj)' or at 'C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(inftrees.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(inftrees.obj)' or at 'C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(inflate.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(inflate.obj)' or at 'C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(inffast.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(inffast.obj)' or at 'C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(deflate.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(deflate.obj)' or at 'C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(crc32.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(crc32.obj)' or at 'C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(compress.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(compress.obj)' or at 'C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(adler32.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(adler32.obj)' or at 'C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\Debug\vc100.pdb'; linking object as if no debug info
+         CinderProject.vcxproj -> C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\Debug\CinderProject.exe
+     1>Done Building Project "C:\Users\student\Desktop\drakem\Final Project (cinder)\CinderProject\vc11\CinderProject.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:12.79
