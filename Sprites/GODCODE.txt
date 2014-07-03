@@ -1,0 +1,114 @@
+class GameObject
+{
+public:
+    Vec2f position;
+    Vec2f direction;
+    int width;
+    int height;
+    float speed;
+    float degrees; // rotation around z-axis
+    gl::Texture texture;
+
+    GameObject()
+    {
+        position.x = 0.f;
+        position.y = 0.f;
+        width = 0;
+        height = 0;
+        direction = Vec2f::xAxis();
+        speed = 2.5f; // Pixels per frame.
+        degrees = 0.f;
+    }
+
+    void setup(gl::Texture tex)
+    {
+        texture = tex;
+        width = texture.getWidth();
+        height = texture.getHeight();
+    }
+
+    void update()
+    {
+        // Change the location of the object.
+        position += speed * direction;
+    }
+
+    void draw()
+    {
+        gl::pushModelView();
+        gl::translate(position.x - width/2, position.y - height/2);
+        gl::rotate(degrees);
+        gl::draw(texture);
+        gl::popModelView();
+    }
+
+    bool collidesWidth(const GameObject& other)
+    {
+        // Simple 2D box collision check.
+        if(position.x - width/2 > other.position.x + other.width/2)
+            return false;
+        if(position.x + width/2 < other.position.x - other.width/2)
+            return false;
+        if(position.y - height/2 > other.position.y + other.height/2)
+            return false;
+        if(position.y + height/2 < other.position.y - other.height/2)
+            return false;
+
+        return true; 
+
+        /*// Alternative: simple 2D sphere collision 
+        float ra = float(width + height) * 0.25f;
+        float rb = float(other.width + other.height) * 0.25f;
+        float minimalDistance = ra + rb;
+        return (position.distance(other.position) < minimalDistance );
+        //*/      
+    }
+};
+
+std::vector<GameObject> bullets;
+std::vector<GameObject> enemies;
+
+void YourApp::setup()
+{
+    auto image = loadImage( loadAsset("bullet.png") );
+    auto texture = gl::Texture::create(image);
+
+    // Test: create 100 bullets
+    for(size_t i=0;i<100;++i) {
+        GameObject bullet;
+        bullet.setup(texture);
+        bullet.position = getWindowSize() / 2;
+
+        // #include "cinder/Rand.h"
+        bullet.direction = ci::Rand::randVec2f(); 
+
+        bullets.push_back(bullet);
+        }
+}
+
+void YourApp::update()
+{
+    for(size_t i=0; i<bullets.size();++i)
+        bullets[i].update();
+
+    for(size_t i=0;i<enemies.size();++i)
+        enemies[i].update();
+
+    for(size_t i=0;i<bullets.size();++i) {
+        for(size_t j=0;j<enemies.size();++j) {
+            if(bullets[i].collidesWith(enemies[j]) {
+                // Make explosion, etc, etc.
+        }
+    }
+}
+
+void YourApp::draw()
+{
+    ci::gl::clear();
+
+    for(size_t i=0;i<bullets.size();++i)
+        bullets[i].draw();
+
+    for(size_t i=0;i<enemies.size();++i)
+        enemies[i].draw();
+}
